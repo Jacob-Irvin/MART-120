@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>First Page</title>
+<style>span{font-family: Arial, Helvetica, sans-serif; color: brown;}</style>
+<link rel="stlyesheet" type="text/css" href="main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<span> style="font-family: 'Couier New', Courier,monospace; color:blue"Styled Text</span>
+<div>example1</div>
+<div>example2</div>
+<span>example1</span>
+<span>example2</span>
+<span>example3</span>
+<h1>Favorite Hobbies</h1>
+<ul>
+<li>Traveling</li>
+<li>Living life</li>
+<li>Fashion</li>
+<li>Adventuring</li>
+<li>Video Games</li>
+</ul>
+<h1>Favorite Restaurants</h1> 
+<ul>
+<li><a href="http://pieholemissoula.com" target="_new">Pie Hole</a></li>
+<li><a href="http://www.tacosano.net" target="_new">Taco Sano</a></li> 
+<li><a href="https://www.veeradonuts.com" target="_new">Veera</a></li>
+</ul>
+<h1>Favorite Websites</h1>
+<ol>
+<li><a href="https://www.amazon.com" target="_new">Amazon</a></li>
+<li><a href="https://www.youtube.com" target="_new">YouTube</a></li>
+<li><a href="https://www.nordstrom.com" target="_new">Nordstrom</a></li>
+</ol>
+<a href="Second Page.html" target="_new">Go to Second Page</a> 
+</body>
+</html>
