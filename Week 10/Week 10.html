@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>First p5.js Page</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+        <script>
+
+            var x = 100
+            var y = 200
+            var diameter = 50 
+            var x1 = 150
+            var y1 = 250
+           
+            function setup()
+            {
+                createCanvas(500,500);
+            }
+            
+            function draw()
+            {
+                fill('red');
+                circle(x,y, diameter);  
+
+                fill('blue');
+                circle(x1, y1, diameter);
+
+                x++;
+                x1++;
+            }  
+
+            function draw();
+            {
+                fill('blue');
+                circle(x1, y1, diameter); 
+
+                fill('red');
+                circle(x, y, diameter); 
+                y++; 
+                y1++;
+            }
+
+            function draw(); 
+            {
+                fill('green');
+                circle(x, y, diameter);
+                x++;
+                y++;
+            }
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
