@@ -4,74 +4,150 @@
             <h1>EXIT</h1>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
             <script>
-           
-            var myXs = [];
-            var myYs = [];
-            var myDiameters = [];
-           function setup()
-           {
-             createCanvas(500, 500);
-             var x = 50;
-             var y = 50;
-             var diameter = 25;
-             var mousex = 0;
-             var mousey = 0;
-             var x2 = 50;
-             var y2 = 50;
              
-             for(var i = 0; i < 5; i++)
+             function setup()
              {
-               myXs[i] = x;
-               myYs[i] = y;
-               myDiameters[i] = diameter;
-               x += 50; 
-               y += 50;
-               diameter += 25; 
+                 createCanvas (500,500);
              }
-           }
-           
-           function draw()
-           {
-            background(220);
+              
+            var x = 15;
+            var x2 = 15;
+            var x3 = 15;
+            var x4 = 15;
+            var x5 = 15;
+            var x6 = 15;
+            var y = 0;
+            var d = 20;
+            var d2 = 30;
+            var d3 = 40;
+            var y2 = 100;
+            var y3 = 200;
+            var y4 = 300;
+            var y5 = 400;
+            var y6 = 500;
+            var speed = 4; 
+            var speed2 = 6;
+            var speed3 = 8;
+            var speed4 = 4;
+            var speed5 = 6; 
+            var speed6 = 8; 
+            var x7 = 250;
+            var y7 = 450;
+            var mousex = 0;
+            var mousey = 0;
 
-            fill('purple');
-            square(x2, y2, 20, 20);
 
-            ellipse(mousex, mousey, 15, 50);
+            
+            
 
-             for(var i = 0; i < myXs.length; i++)
+
+            
+             function draw() //this is the function for the player and for the moving shapes
              {
-               circle(myXs[i], myYs[i], myDiameters[i]); 
-             }
-           } 
+                background (220);
+                 
+                fill('purple')
+                square(x7, y7, 50);
+        
+                fill('red')
+                circle(x, y, d); 
+                if(x >= 500 || x <= 0)
+                {
+                    speed *= -1; 
+                }
+                x += speed; 
+            
+                fill('blue')
+                circle(x2, y2, d2); 
+                if(x2 >= 500 || x2 <= 0)
+                {
+                    speed2 *= -1; 
+                }
+                x2 += speed2;
 
-           function mouseMoved()
-           {
-             mousex = mousex;
-             mousey = mouseY; 
-           }
+                fill ('green')
+                circle(x3, y3, d3);
+                if(x3 >= 500 || x3 <= 0)
+                {
+                    speed3 *= -1; 
+                }
+                x3 += speed3;
 
-             function keyPressed()
-             {
-              if (key == 'd')
+                fill('red')
+                circle(x4, y4, d);
+                if(x4 >= 500 || x4 <= 0)
+                {
+                    speed4 *= -1; 
+                }
+                x4 += speed4;
+
+                fill('blue')
+                circle(x5, y5, d2);
+                if(x5 >= 500 || x5 <= 0)
+                {
+                    speed5 *= -1; 
+                }
+                x5 += speed5;
+
+                fill('green')
+                circle(x6, y6, d3);
+                if(x6 >= 500 || x6 <= 0)
+                {
+                    speed6 *= -1; 
+                }
+                x6 += speed6; 
+
+                fill('yellow')
+                circle (mousex, mousey, 25);
+
+                if(x7 <= 0 || y7 <= 0); //this calls "you win" message 
                     {
-                        x2+=15;
+                        fill(0);
+                        stroke(5);
+                        textSize(26);
+                        text("You Win!", width/2-50, height/2-50);
+                    }
+             }
+
+                    function keyPressed() //this is the function for moving player
+                {
+                        if (key == 'd')
+                    {
+                        x7+=15;
                     }
                     else if (key == 'a')
                     {
-                        x2-=15;
+                        x7-=15;
                     }
                     else if (key == 's')
                     {
-                        y2+=15;
+                        y7+=15;
                     }
                     else if (key == 'w')
                     {
-                        y2-=15;
+                        y7-=15;
                     }
-             }
-             
-           
+                }
+
+                function mouseClicked() //this function causes circle to be drawn upon clicking the mouse
+                {
+                    mousex = mouseX;
+                    mousey = mouseY; 
+                }
+
+
+               
+                
+                
+
+                
+   
+          
+            
+            
+
+
+
             </script>
         </body>
 </html>
