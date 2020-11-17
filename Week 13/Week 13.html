@@ -1,0 +1,65 @@
+<html>
+<title> Week 12 </title>
+
+<body>
+  <h1>EXIT</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script>
+    var myXs = [];
+    var myYs = [];
+    var myDiameters = [];
+    var x2 = 50;
+    var y2 = 50;
+    var mousex = 0;
+    var mousey = 0;
+    
+    function setup() 
+    {
+      createCanvas(500, 500);
+
+
+      for (var i = 0; i < 5; i++) 
+      {
+        myXs[i] = x;
+        myYs[i] = y;
+        myDiameters[i] = diameter;
+        x += 50;
+        y += 50;
+        diameter += 25;
+      }
+    }
+
+    function draw() {
+      background(220);
+
+      fill('purple');
+      square(x2, y2, 20, 20);
+
+      ellipse(mousex, mousey, 15, 50);
+
+      for (var i = 0; i < myXs.length; i++) {
+        circle(myXs[i], myYs[i], myDiameters[i]);
+
+
+        myXs[i] += 10;
+        myYs[i] += 10;
+        
+
+      }
+    }
+
+    function keyPressed() {
+      if (key == 'd') {
+        x2 += 15;
+      } else if (key == 'a') {
+        x2 -= 15;
+      } else if (key == 's') {
+        y2 += 15;
+      } else if (key == 'w') {
+        y2 -= 15;
+      }
+    }
+  </script>
+</body>
+
+</html>
