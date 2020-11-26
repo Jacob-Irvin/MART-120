@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Third Page</title>
+</head>
+<body>
+    <script>
+        var name;
+        var email; 
+        function checkForm()
+        {
+            name=document.getElementById("name").value;
+            window.alert("name: " + name);
+            
+            
+             var email;
+            email=document.getElementById("email").value;
+            window.alert("email: " + email);
+           
+            if(name == "")
+            {
+                window.alert("name is required.");
+                document.getElementById("name").style.backgroundColor = "red"
+                document.getElementById("name").focus();
+            }
+            else 
+            {
+                document.getElementById("name").style.backgroundColor = "white"
+            }
+           
+           if(email == "")
+            {
+                window.alert("Email is required");
+                document.getElementById("email").style.backgroundColor = "red"
+                document.getElementById("email").focus();
+            }
+            else 
+            {
+                document.getElementById("email").style.backgroundColor = "white"
+            }
+        }
+    </script>
+<h1>Contact Us</h1>
+Name: <input type="text" id="name"><br>
+Email: <input type="text" id="email"><br>
+Do you agree to terms and conditions? <button id="yes" type="Yes">Yes</button>
+<button id="no" type="no">No</button><br>
+<td colspan="2"><button id="btnSumbit" onClick="checkForm();">Submit</button></td>
+</form>
+</body>
+</html>
